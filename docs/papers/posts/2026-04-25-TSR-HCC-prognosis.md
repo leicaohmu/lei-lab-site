@@ -13,10 +13,11 @@ tags:
   - WSI
 authors:
   - leicaohmu
-image: assets/covers/TSR-HCC.png
 ---
 
 # 肿瘤-间质比与肝细胞癌预后的非线性关系及多模态融合预后模型
+
+![封面图](../../assets/covers/TSR-HCC.png)
 
 > **研究类型**：回顾性队列研究 + 深度学习方法学  
 > **数据来源**：吉林大学第一医院（JLU，n=392）+ TCGA外部验证队列（n=168）
