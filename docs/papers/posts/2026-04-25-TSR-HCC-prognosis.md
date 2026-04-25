@@ -148,5 +148,4 @@ Vision Transformer 端到端生存预测
 ---
 
 ## 相关资源
-
-- 📄 PDF：`/assets/papers/TSR-HCC-2026.pdf`（需上传至 `docs/assets/papers/` 目录）
+- 📄 [下载 PDF](../../assets/papers/TSR-HCC-2026.pdf)
