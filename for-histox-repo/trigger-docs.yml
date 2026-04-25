@@ -1,0 +1,27 @@
+# ============================================================
+# 将此文件放入 histox 仓库的 .github/workflows/ 目录下
+# 并在 histox 仓库的 Settings -> Secrets 中添加：
+#   Name:  DOCS_REPO_TOKEN
+#   Value: 文档仓库的 Fine-grained PAT（需要 Contents: Write 权限）
+# ============================================================
+
+name: Trigger Docs Update
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types: [published]   # 发布新版本到 PyPI 时也触发
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger lei-lab-site to redeploy
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.DOCS_REPO_TOKEN }}
+          repository: leicaohmu/lei-lab-site   # 文档仓库地址
+          event-type: pypi-lib-updated
+          client-payload: '{"version": "${{ github.ref_name }}"}'

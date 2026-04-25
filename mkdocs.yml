@@ -1,0 +1,94 @@
+site_name: Lei-Lab Knowledge Platform
+site_url: https://leicaohmu.github.io/lei-lab-site
+site_description: 课题组知识共享平台 · 交互式学习 · 开放协作
+site_author: Lei-Lab Team
+repo_url: https://github.com/leicaohmu/lei-lab-site
+repo_name: leicaohmu/lei-lab-site
+
+theme:
+  name: material
+  language: zh
+  logo: assets/logo.svg
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+plugins:
+  - search:
+      lang: zh
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_source: true
+            show_root_heading: true
+            show_category_heading: true
+            show_symbol_type_heading: true
+            show_symbol_type_toc: true
+            docstring_style: google
+            merge_init_into_class: true
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+
+nav:
+  - 首页: index.md
+  - 课程:
+    - 概览: courses/index.md
+    - 生物统计学: courses/biostat.md
+    - 深度学习基础: courses/deep_learning.md
+  - 演示工具:
+    - 概览: tools/index.md
+  - 代码库:
+    - 概览: api/index.md
+    - histox:
+      - 快速上手: api/histox/quickstart.md
+      - Project: api/histox/project.md
+      - ModelParams: api/histox/model_params.md
+      - Heatmap: api/histox/heatmap.md
+      - 工具函数: api/histox/utils.md
+  - 文献抄读:
+    - 概览: papers/index.md
+  - 博客:
+    - 概览: blog/index.md
+  - 课题组:
+    - 认识我们: team/index.md
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/leicaohmu
+
+copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.

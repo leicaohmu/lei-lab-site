@@ -1,0 +1,37 @@
+name: Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+    types: [pypi-lib-updated]   # 监听来自 histox 仓库的触发
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout docs repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install MkDocs dependencies
+        run: |
+          pip install mkdocs-material mkdocstrings[python]
+
+      - name: Wait for PyPI to sync (only on lib update trigger)
+        if: github.event_name == 'repository_dispatch'
+        run: sleep 60
+
+      - name: Install latest histox from PyPI
+        run: pip install histox --upgrade
+
+      - name: Deploy to GitHub Pages
+        run: mkdocs gh-deploy --force
