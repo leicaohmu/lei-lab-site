@@ -41,6 +41,8 @@ plugins:
   - blog:
       blog_dir: papers
       post_date_format: full
+      post_cover: blur
+      post_cover_anchor: top
       post_url_format: "{date}/{slug}"
       archive: true
       archive_name: 按时间归档
