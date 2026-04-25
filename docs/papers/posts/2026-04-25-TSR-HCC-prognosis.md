@@ -13,7 +13,7 @@ tags:
   - WSI
 authors:
   - leicaohmu
-image: assets/covers/TSR-HCC.png    # ← 新增封面图
+image: assets/covers/TSR-HCC.png
 ---
 
 # 肿瘤-间质比与肝细胞癌预后的非线性关系及多模态融合预后模型
