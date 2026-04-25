@@ -34,8 +34,6 @@ theme:
     - content.code.copy
     - content.code.annotate
 
-  extra_css:
-  - assets/extra.css
 
 plugins:
   - search:
@@ -96,5 +94,7 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/leicaohmu
+extra_css:
+  - assets/extra.css
 
 copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.
