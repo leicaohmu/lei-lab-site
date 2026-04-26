@@ -1,4 +1,1 @@
----
-hide:
-  - navigation
----
+# 文献抄读

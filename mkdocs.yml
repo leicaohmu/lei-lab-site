@@ -53,8 +53,8 @@ plugins:
       pagination: true
       pagination_per_page: 10
       blog_toc: true
-  - tags:
-      tags_file: papers/tags.md
+  # - tags:
+  #     tags_file: papers/tags.md
   - mkdocstrings:
       handlers:
         python:
@@ -102,7 +102,7 @@ nav:
       - 工具函数: api/histox/utils.md
   - 文献抄读:
     - 概览: papers/index.md
-    - 标签索引: papers/tags.md
+    # - 标签索引: papers/tags.md
   - 博客:
     - 概览: blog/index.md
   - 课题组:
