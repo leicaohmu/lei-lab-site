@@ -7,14 +7,14 @@ title: 课程
 
 <div class="grid cards" markdown>
 
-- :material-chart-bell-curve: **生物统计学**
+-   :material-chart-bell-curve: **生物统计学**
 
-  ---
+    ---
   涵盖概率论、假设检验、回归分析、生存分析等核心内容。
 
   <!-- [:octicons-arrow-right-24: 进入课程](biostat/index.md) -->
 
-- :material-matrix: **线性代数**
+-   :material-matrix: **线性代数**
 
   ---
   从向量、矩阵到特征值分解、奇异值分解，面向数据科学应用。
