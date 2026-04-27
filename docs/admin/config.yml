@@ -3,6 +3,7 @@ backend:
   repo: leicaohmu/lei-lab-site
   branch: main
   auth_type: pkce          # 使用 PKCE 模式，无需 Netlify 中转
+  app_id: Ov23lil4YMVIT5w7AyeE
 
 media_folder: "docs/assets/images/uploads"
 public_folder: "/assets/images/uploads"
