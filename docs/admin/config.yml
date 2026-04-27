@@ -1,15 +1,12 @@
 backend:
   name: github
-  repo: leicaohmu/lei-lab-site        # ← 你的 GitHub 仓库
+  repo: leicaohmu/lei-lab-site   # ← 你的 GitHub 仓库
   branch: main
-  base_url: https://api.netlify.com   # 用 Netlify 做 OAuth 中转
-  auth_endpoint: auth
+  # 不需要 base_url 和 auth_endpoint！
 
-# 图片上传路径
 media_folder: "docs/assets/images/uploads"
 public_folder: "/assets/images/uploads"
 
-# 语言设置
 locale: zh_Hans
 
 collections:
