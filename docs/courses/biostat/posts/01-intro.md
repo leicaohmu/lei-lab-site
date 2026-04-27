@@ -4,9 +4,6 @@ slug: 01-intro
 date: 2026-04-27
 authors:
   - lei
-categories:
-  - 描述统计
-  - 基础概念
 ---
 
 !!! info "📋 页面信息"

@@ -79,8 +79,7 @@ plugins:
       post_date_format: full
       post_url_format: "{slug}"
       archive: false
-      categories: true
-      categories_name: 知识点
+      categories: false
       pagination: false
       blog_toc: true
       authors: true
@@ -92,8 +91,7 @@ plugins:
       post_date_format: full
       post_url_format: "{slug}"
       archive: false
-      categories: true
-      categories_name: 知识点
+      categories: false
       pagination: false
       blog_toc: true
       authors: true

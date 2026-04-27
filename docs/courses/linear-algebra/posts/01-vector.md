@@ -4,9 +4,6 @@ slug: 01-vector
 date: 2026-04-27
 authors:
   - lei
-categories:
-  - 向量
-  - 向量空间
 ---
 
 ## 1.1 向量的定义
