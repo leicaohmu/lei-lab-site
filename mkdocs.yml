@@ -107,6 +107,8 @@ nav:
     - 概览: blog/index.md
   - 课题组:
     - 认识我们: team/index.md
+    - 发表文章: team/publications.md
+    - 荣誉奖项: team/awards.md
   - ✏️ 管理: https://lei-lab-site.pages.dev/admin/
 
 
