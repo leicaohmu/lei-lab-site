@@ -2,7 +2,8 @@ backend:
   name: github
   repo: leicaohmu/lei-lab-site
   branch: main
-  app_id: Ov23lil4YMVIT5w7AyeE
+  base_url: https://lei-lab-oauth.caolei-645.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "docs/assets/images/uploads"
 public_folder: "/assets/images/uploads"
