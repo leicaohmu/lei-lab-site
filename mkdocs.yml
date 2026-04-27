@@ -10,6 +10,7 @@ theme:
   language: zh
   logo: assets/logo.svg
   favicon: assets/logo.png
+  custom_dir: overrides
   palette:
     - scheme: default
       primary: teal
@@ -33,7 +34,6 @@ theme:
     - content.code.copy
     - content.code.annotate
     - toc.follow
-    # navigation.prune 已删除 ← 它会裁剪掉未激活的子菜单导致无法展开
 
 plugins:
   - search:
@@ -69,28 +69,6 @@ plugins:
       categories_name: 分类
       pagination: true
       pagination_per_page: 10
-      blog_toc: true
-      authors: true
-      authors_file: "{blog}/.authors.yml"
-
-  # 课程：生物统计学
-  - blog:
-      blog_dir: courses/biostat/chapters
-      post_url_format: "{slug}"
-      archive: false
-      categories: false
-      pagination: false
-      blog_toc: true
-      authors: true
-      authors_file: "{blog}/.authors.yml"
-
-  # 课程：线性代数
-  - blog:
-      blog_dir: courses/linear-algebra/chapters
-      post_url_format: "{slug}"
-      archive: false
-      categories: false
-      pagination: false
       blog_toc: true
       authors: true
       authors_file: "{blog}/.authors.yml"
@@ -137,10 +115,10 @@ nav:
     - 概览: courses/index.md
     - 生物统计学:
       - 课程介绍: courses/biostat/chapters/index.md
-      - 第1章 绪论: courses/biostat/chapters/posts/01-intro.md
+      - 第1章 绪论: courses/biostat/chapters/01-intro.md
     - 线性代数:
       - 课程介绍: courses/linear-algebra/chapters/index.md
-      - 第1章 向量与向量空间: courses/linear-algebra/chapters/posts/01-vector.md
+      - 第1章 向量与向量空间: courses/linear-algebra/chapters/01-vector.md
   - 演示工具:
     - 概览: tools/index.md
   - 代码库:

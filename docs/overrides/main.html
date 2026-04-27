@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{# 只在有 authors 的页面显示作者卡片 #}
+{% if page.meta and page.meta.authors %}
+<div class="md-post-authors">
+  {% for author in page.meta.authors %}
+  <div class="md-post-author">
+    {% if author.avatar %}
+    <img src="{{ author.avatar }}" alt="{{ author.name }}" class="md-post-author__avatar">
+    {% endif %}
+    <div class="md-post-author__info">
+      <span class="md-post-author__name">{{ author.name }}</span>
+      {% if author.title %}
+      <span class="md-post-author__title">{{ author.title }}</span>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+  {% if page.meta.date %}
+  <div class="md-post-author__meta">
+    <span>📅 {{ page.meta.date }}</span>
+  </div>
+  {% endif %}
+</div>
+{% endif %}
+
+{{ super() }}
+
+{% endblock %}

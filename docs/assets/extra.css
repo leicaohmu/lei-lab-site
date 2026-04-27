@@ -92,3 +92,51 @@
 .md-post__back {
   display: none;
 }
+/* ============================================================
+   课程文章作者卡片
+   ============================================================ */
+
+.md-post-authors {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1.5rem;
+  background: var(--md-code-bg-color);
+  border-radius: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.md-post-author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-post-author__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.md-post-author__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.md-post-author__name {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.md-post-author__title {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.md-post-author__meta {
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--light);
+  margin-left: auto;
+}
