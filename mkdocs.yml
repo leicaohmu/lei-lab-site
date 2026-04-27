@@ -1,3 +1,4 @@
+```yaml
 site_name: Lei-Lab Knowledge Platform
 site_url: https://leicaohmu.github.io/lei-lab-site
 site_description: 课题组知识共享平台 · 交互式学习 · 开放协作
@@ -27,12 +28,14 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.sections
-    - navigation.expand
+    - navigation.prune
+    - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
     - content.code.copy
     - content.code.annotate
+    - toc.follow
 
 
 plugins:
@@ -128,7 +131,9 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/leicaohmu
+
 extra_css:
   - assets/extra.css
 
 copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.
+```
