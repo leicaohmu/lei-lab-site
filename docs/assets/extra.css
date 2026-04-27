@@ -1,62 +1,58 @@
 /* ============================================================
-   Logo 独占左侧列，跨越 Header + Tabs 两行
+   Header & Logo — Logo 撑高 Header，不溢出不跨行
    ============================================================ */
 
 .md-header {
-  height: 48px;
-  min-height: 48px;
+  height: 72px;          /* ← 跟着 Logo 走 */
+  min-height: 72px;
   position: relative;
   z-index: 10;
-  overflow: visible;   /* 允许 Logo 向下溢出覆盖 Tabs */
+  overflow: hidden;
 }
 
 .md-header__inner {
-  height: 48px;
-  padding: 0 16px 0 0;
+  height: 72px;
+  padding: 0 16px;
   display: flex;
   align-items: center;
 }
 
-/* Logo：不脱离文档流，作为 flex 第一项 */
+/* Logo 正常在 flex 流中 */
 .md-header__button.md-logo {
-  position: relative;   /* ✅ 改掉 absolute */
+  position: relative;
   flex-shrink: 0;
-  width: 72px;
-  height: 88px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 0;
-  margin: 0;
-  z-index: 20;
-  background-color: var(--md-primary-fg-color);
+  margin: 0 12px 0 0;
 }
 
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 72px;
-  width: 72px;
+  height: 64px;
+  width: 64px;
   object-fit: contain;
 }
 
-/* 标题紧跟 Logo，用 margin-left 留出间距即可 */
+/* 标题 */
 .md-header__title {
-  margin-left: 8px;    /* ✅ 不再需要硬编码 96px */
+  margin-left: 0;
   font-size: 1rem;
-  line-height: 48px;
-  height: 48px;
+  line-height: 72px;
+  height: 72px;
 }
 
-/* Tabs 左侧 padding 与 Logo 宽度对齐 */
+/* Tabs */
 .md-tabs {
   height: 40px;
   min-height: 40px;
-  position: relative;
-  z-index: 9;
 }
 
 .md-tabs__inner {
-  padding-left: 88px;  /* 72(logo) + 16(left边距) */
+  padding-left: 16px;
 }
 
 .md-tabs__list {
