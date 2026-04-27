@@ -7,20 +7,20 @@
   min-height: 48px;
   position: relative;
   z-index: 10;
+  overflow: visible;   /* 允许 Logo 向下溢出覆盖 Tabs */
 }
 
 .md-header__inner {
   height: 48px;
-  padding: 0;
+  padding: 0 16px 0 0;
   display: flex;
   align-items: center;
 }
 
-/* Logo 固定在左侧，跨两行 */
+/* Logo：不脱离文档流，作为 flex 第一项 */
 .md-header__button.md-logo {
-  position: absolute;
-  left: 16px;
-  top: 0;
+  position: relative;   /* ✅ 改掉 absolute */
+  flex-shrink: 0;
   width: 72px;
   height: 88px;
   display: flex;
@@ -39,15 +39,15 @@
   object-fit: contain;
 }
 
-/* 标题向右偏移，紧跟 Logo */
+/* 标题紧跟 Logo，用 margin-left 留出间距即可 */
 .md-header__title {
-  margin-left: 96px;   /* 16(left) + 72(logo宽) + 8(间距) */
+  margin-left: 8px;    /* ✅ 不再需要硬编码 96px */
   font-size: 1rem;
   line-height: 48px;
   height: 48px;
 }
 
-/* Tabs 向右偏移，与标题对齐 */
+/* Tabs 左侧 padding 与 Logo 宽度对齐 */
 .md-tabs {
   height: 40px;
   min-height: 40px;
@@ -56,7 +56,7 @@
 }
 
 .md-tabs__inner {
-  padding-left: 96px;  /* 与标题对齐 */
+  padding-left: 88px;  /* 72(logo) + 16(left边距) */
 }
 
 .md-tabs__list {
