@@ -84,6 +84,8 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:          # ✅ 新增：启用数学公式支持
+      generic: true
 
 nav:
   - 首页: index.md
@@ -132,5 +134,9 @@ extra:
 
 extra_css:
   - assets/extra.css
+
+extra_javascript:
+  - assets/mathjax.js                                      # ✅ 新增：MathJax 配置文件
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js      # ✅ 新增：MathJax CDN
 
 copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.
