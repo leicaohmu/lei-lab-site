@@ -1,3 +1,4 @@
+```yaml
 backend:
   name: github
   repo: leicaohmu/lei-lab-site
@@ -57,10 +58,10 @@ collections:
         allow_add: true
       - { label: "正文", name: "body", widget: "markdown" }
 
-  # ============ 课程 ============
-  - name: "courses"
-    label: "📚 课程"
-    folder: "docs/courses"
+  # ============ 课程：生物统计学 ============
+  - name: "courses-biostat"
+    label: "📚 生物统计学"
+    folder: "docs/courses/biostat"
     create: true
     slug: "{{slug}}"
     fields:
@@ -71,3 +72,19 @@ collections:
         widget: "list"
         allow_add: true
         required: false
+
+  # ============ 课程：线性代数 ============
+  - name: "courses-linear-algebra"
+    label: "📚 线性代数"
+    folder: "docs/courses/linear-algebra"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "正文", name: "body", widget: "markdown" }
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: false
+```
