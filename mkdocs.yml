@@ -75,8 +75,7 @@ plugins:
 
   # 课程：生物统计学
   - blog:
-      blog_dir: courses/biostat
-      post_date_format: full
+      blog_dir: courses/biostat/chapters
       post_url_format: "{slug}"
       archive: false
       categories: false
@@ -87,8 +86,7 @@ plugins:
 
   # 课程：线性代数
   - blog:
-      blog_dir: courses/linear-algebra
-      post_date_format: full
+      blog_dir: courses/linear-algebra/chapters
       post_url_format: "{slug}"
       archive: false
       categories: false
@@ -139,10 +137,10 @@ nav:
     - 概览: courses/index.md
     - 生物统计学:
       - 课程介绍: courses/biostat/index.md
-      - 第1章 绪论: courses/biostat/posts/01-intro.md
+      - 第1章 绪论: courses/biostat/chapters/posts/01-intro.md
     - 线性代数:
       - 课程介绍: courses/linear-algebra/index.md
-      - 第1章 向量与向量空间: courses/linear-algebra/posts/01-vector.md
+      - 第1章 向量与向量空间: courses/linear-algebra/chapters/posts/01-vector.md
   - 演示工具:
     - 概览: tools/index.md
   - 代码库:
