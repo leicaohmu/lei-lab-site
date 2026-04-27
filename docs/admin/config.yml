@@ -1,0 +1,75 @@
+backend:
+  name: github
+  repo: leicaohmu/lei-lab-site        # ← 你的 GitHub 仓库
+  branch: main
+  base_url: https://api.netlify.com   # 用 Netlify 做 OAuth 中转
+  auth_endpoint: auth
+
+# 图片上传路径
+media_folder: "docs/assets/images/uploads"
+public_folder: "/assets/images/uploads"
+
+# 语言设置
+locale: zh_Hans
+
+collections:
+
+  # ============ 文献抄读 ============
+  - name: "papers"
+    label: "📄 文献抄读"
+    folder: "docs/papers/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "作者"
+        name: "authors"
+        widget: "list"
+        default: ["admin"]
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+      - label: "研究方向（分类）"
+        name: "categories"
+        widget: "select"
+        multiple: true
+        options: ["肝细胞癌", "计算病理", "深度学习", "生物统计", "多模态融合"]
+      - { label: "摘要（列表页显示）", name: "description", widget: "text", required: false }
+      - { label: "封面图", name: "cover_image", widget: "image", required: false }
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  # ============ 知识博客 ============
+  - name: "blog"
+    label: "✏️ 知识博客"
+    folder: "docs/blog/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "作者"
+        name: "authors"
+        widget: "list"
+        default: ["admin"]
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+      - { label: "正文", name: "body", widget: "markdown" }
+
+  # ============ 课程 ============
+  - name: "courses"
+    label: "📚 课程"
+    folder: "docs/courses"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "标题", name: "title", widget: "string" }
+      - { label: "正文", name: "body", widget: "markdown" }
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        allow_add: true
+        required: false
