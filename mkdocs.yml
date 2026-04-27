@@ -107,15 +107,13 @@ nav:
     - 概览: blog/index.md
   - 课题组:
     - 认识我们: team/index.md
+  - ✏️ 管理: https://lei-lab-site.pages.dev/admin/
 
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/leicaohmu
-    - icon: fontawesome/solid/pen-to-square
-      link: /admin/
-      name: 内容管理
 extra_css:
   - assets/extra.css
 
