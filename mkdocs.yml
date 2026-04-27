@@ -138,9 +138,11 @@ nav:
   - 课程:
     - 概览: courses/index.md
     - 生物统计学:
-      - 课程介绍: courses/biostat/index.md
+      - 课程介绍: courses/biostat/about.md
+      - 章节列表: courses/biostat/index.md
     - 线性代数:
-      - 课程介绍: courses/linear-algebra/index.md
+      - 课程介绍: courses/linear-algebra/about.md
+      - 章节列表: courses/linear-algebra/index.md
   - 演示工具:
     - 概览: tools/index.md
   - 代码库:
