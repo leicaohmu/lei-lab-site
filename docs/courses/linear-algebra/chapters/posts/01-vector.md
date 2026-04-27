@@ -62,4 +62,4 @@ authors:
 
 ---
 
-[:octicons-arrow-left-24: 返回课程介绍](index.md) &nbsp;&nbsp; [:octicons-arrow-right-24: 下一章：矩阵运算](02-matrix.md)
+<!-- [:octicons-arrow-left-24: 返回课程介绍](index.md) &nbsp;&nbsp; [:octicons-arrow-right-24: 下一章：矩阵运算](02-matrix.md) -->

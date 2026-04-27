@@ -64,4 +64,4 @@ authors:
 
 ---
 
-[:octicons-arrow-left-24: 返回课程介绍](index.md) &nbsp;&nbsp; [:octicons-arrow-right-24: 下一章：概率论基础](02-probability.md)
+<!-- [:octicons-arrow-left-24: 返回课程介绍](index.md) &nbsp;&nbsp; [:octicons-arrow-right-24: 下一章：概率论基础](02-probability.md) -->
