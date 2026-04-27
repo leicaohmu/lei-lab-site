@@ -35,10 +35,11 @@ theme:
     - content.code.annotate
     - toc.follow
 
-
 plugins:
   - search:
       lang: zh
+
+  # ✅ 文献抄读（原有，保持不变）
   - blog:
       blog_dir: papers
       post_date_format: full
@@ -54,8 +55,34 @@ plugins:
       pagination: true
       pagination_per_page: 10
       blog_toc: true
-  # - tags:
-  #     tags_file: papers/tags.md
+
+  # ✅ 新增：知识博客（blog 插件多实例）
+  - blog:
+      blog_dir: blog
+      post_date_format: full
+      post_url_format: "{date}/{slug}"
+      archive: true
+      archive_name: 按时间归档
+      archive_date_format: yyyy
+      archive_url_format: "archive/{date}"
+      categories: true
+      categories_name: 分类
+      pagination: true
+      pagination_per_page: 10
+      blog_toc: true
+      authors: true
+      authors_file: "{blog}/.authors.yml"
+
+  # ✅ 新增：显示页面最后更新时间（课程、博客等所有页面）
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true   # 本地没有 git 记录时用构建时间兜底
+
+  # ✅ 新增：显示阅读时间
+  - reading-time:
+      words_per_minute: 300          # 中文阅读速度约 300 字/分钟
+
   - mkdocstrings:
       handlers:
         python:
@@ -84,7 +111,7 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.arithmatex:          # ✅ 新增：启用数学公式支持
+  - pymdownx.arithmatex:
       generic: true
 
 nav:
@@ -109,7 +136,6 @@ nav:
       - 工具函数: api/histox/utils.md
   - 文献抄读:
     - 概览: papers/index.md
-    # - 标签索引: papers/tags.md
   - 博客:
     - 概览: blog/index.md
   - 课题组:
@@ -117,7 +143,6 @@ nav:
     - 发表文章: team/publications.md
     - 荣誉奖项: team/awards.md
   - ✏️ 管理: https://lei-lab-site.pages.dev/admin/
-
 
 extra:
   social:
@@ -128,7 +153,7 @@ extra_css:
   - assets/extra.css
 
 extra_javascript:
-  - assets/mathjax.js                                      # ✅ 新增：MathJax 配置文件
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js      # ✅ 新增：MathJax CDN
+  - assets/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.

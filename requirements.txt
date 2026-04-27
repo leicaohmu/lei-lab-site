@@ -2,3 +2,5 @@ mkdocs>=1.6
 mkdocs-material>=9.0
 mkdocstrings>=0.24
 mkdocstrings-python>=1.0
+mkdocs-git-revision-date-localized-plugin
+mkdocs-reading-time
