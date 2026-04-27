@@ -73,29 +73,8 @@ plugins:
       authors: true
       authors_file: "{blog}/.authors.yml"
 
-  # 课程：生物统计学
-  - blog:
-      blog_dir: courses/biostat
-      post_date_format: full
-      post_url_format: "{slug}"
-      archive: false
-      categories: false
-      pagination: false
-      blog_toc: true
-      authors: true
-      authors_file: "{blog}/.authors.yml"
-
-  # 课程：线性代数
-  - blog:
-      blog_dir: courses/linear-algebra
-      post_date_format: full
-      post_url_format: "{slug}"
-      archive: false
-      categories: false
-      pagination: false
-      blog_toc: true
-      authors: true
-      authors_file: "{blog}/.authors.yml"
+  # ❌ 已删除：courses/biostat 的 blog 实例
+  # ❌ 已删除：courses/linear-algebra 的 blog 实例
 
   - git-revision-date-localized:
       enable_creation_date: true
