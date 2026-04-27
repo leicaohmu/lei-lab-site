@@ -26,7 +26,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.prune
     - navigation.indexes
     - navigation.top
     - search.suggest
@@ -34,6 +33,7 @@ theme:
     - content.code.copy
     - content.code.annotate
     - toc.follow
+    # navigation.prune 已删除 ← 它会裁剪掉未激活的子菜单导致无法展开
 
 plugins:
   - search:
