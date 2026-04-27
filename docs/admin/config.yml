@@ -1,8 +1,8 @@
 backend:
   name: github
-  repo: leicaohmu/lei-lab-site   # ← 你的 GitHub 仓库
+  repo: leicaohmu/lei-lab-site
   branch: main
-  # 不需要 base_url 和 auth_endpoint！
+  auth_type: pkce          # 使用 PKCE 模式，无需 Netlify 中转
 
 media_folder: "docs/assets/images/uploads"
 public_folder: "/assets/images/uploads"
