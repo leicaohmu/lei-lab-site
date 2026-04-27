@@ -1,0 +1,7 @@
+# docs/courses/biostat/.authors.yml
+# docs/courses/linear-algebra/.authors.yml（内容相同）
+authors:
+  lei:
+    name: Lei
+    description: 课题组负责人
+    avatar: https://github.com/leicaohmu.png
