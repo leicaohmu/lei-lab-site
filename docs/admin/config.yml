@@ -1,4 +1,3 @@
-```yaml
 backend:
   name: github
   repo: leicaohmu/lei-lab-site
@@ -87,4 +86,3 @@ collections:
         widget: "list"
         allow_add: true
         required: false
-```
