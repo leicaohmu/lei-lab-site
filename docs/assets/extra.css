@@ -44,11 +44,11 @@
   height: 72px;
 }
 
-/* ✅ 关键：Tabs 的 top 要等于 header 高度 */
+/* Tabs 紧跟 header */
 .md-tabs {
   height: 40px;
   min-height: 40px;
-  top: 72px !important;   /* header 是 72px，Tabs 紧跟在下方 */
+  top: 72px !important;
 }
 
 .md-tabs__inner {
@@ -78,11 +78,6 @@
 .md-tabs__link .md-icon svg {
   width: 16px;
   height: 16px;
-}
-
-/* ✅ 内容区顶部留出 header(72) + tabs(40) 的空间 */
-.md-main {
-  margin-top: 112px !important;  /* 72 + 40 */
 }
 
 /* 首页卡片间距 */
