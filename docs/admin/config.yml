@@ -1,88 +1,44 @@
-backend:
-  name: github
-  repo: leicaohmu/lei-lab-site
-  branch: main
-  base_url: https://lei-lab-oauth.caolei-645.workers.dev
-  auth_endpoint: /auth
-
-media_folder: "docs/assets/images/uploads"
-public_folder: "/assets/images/uploads"
-
-locale: zh_Hans
-
 collections:
-
-  # ============ 文献抄读 ============
-  - name: "papers"
-    label: "📄 文献抄读"
-    folder: "docs/papers/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-      - label: "作者"
-        name: "authors"
-        widget: "list"
-        default: ["admin"]
-      - label: "标签"
-        name: "tags"
-        widget: "list"
-        allow_add: true
-      - label: "研究方向（分类）"
-        name: "categories"
-        widget: "select"
-        multiple: true
-        options: ["肝细胞癌", "计算病理", "深度学习", "生物统计", "多模态融合"]
-      - { label: "摘要（列表页显示）", name: "description", widget: "text", required: false }
-      - { label: "封面图", name: "cover_image", widget: "image", required: false }
-      - { label: "正文", name: "body", widget: "markdown" }
-
-  # ============ 知识博客 ============
-  - name: "blog"
-    label: "✏️ 知识博客"
-    folder: "docs/blog/posts"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "发布日期", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-      - label: "作者"
-        name: "authors"
-        widget: "list"
-        default: ["admin"]
-      - label: "标签"
-        name: "tags"
-        widget: "list"
-        allow_add: true
-      - { label: "正文", name: "body", widget: "markdown" }
-
-  # ============ 课程：生物统计学 ============
-  - name: "courses-biostat"
-    label: "📚 生物统计学"
-    folder: "docs/courses/biostat"
+  - name: biostat
+    label: 生物统计学
+    folder: docs/courses/biostat/posts
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "正文", name: "body", widget: "markdown" }
-      - label: "标签"
-        name: "tags"
-        widget: "list"
-        allow_add: true
-        required: false
+      - { label: 标题, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: 发布日期, name: date, widget: datetime }
+      - { label: 作者, name: authors, widget: list, default: [lei] }
+      - { label: 正文, name: body, widget: markdown }
 
-  # ============ 课程：线性代数 ============
-  - name: "courses-linear-algebra"
-    label: "📚 线性代数"
-    folder: "docs/courses/linear-algebra"
+  - name: linear-algebra
+    label: 线性代数
+    folder: docs/courses/linear-algebra/posts
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "标题", name: "title", widget: "string" }
-      - { label: "正文", name: "body", widget: "markdown" }
-      - label: "标签"
-        name: "tags"
-        widget: "list"
-        allow_add: true
-        required: false
+      - { label: 标题, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: 发布日期, name: date, widget: datetime }
+      - { label: 作者, name: authors, widget: list, default: [lei] }
+      - { label: 正文, name: body, widget: markdown }
+
+  - name: biostat-about
+    label: 生物统计学 - 课程介绍
+    files:
+      - label: 课程介绍
+        name: about
+        file: docs/courses/biostat/about.md
+        fields:
+          - { label: 标题, name: title, widget: string }
+          - { label: 正文, name: body, widget: markdown }
+  
+  - name: linear-algebra-about
+    label: 线性代数 - 课程介绍
+    files:
+      - label: 课程介绍
+        name: about
+        file: docs/courses/linear-algebra/about.md
+        fields:
+          - { label: 标题, name: title, widget: string }
+          - { label: 正文, name: body, widget: markdown }
