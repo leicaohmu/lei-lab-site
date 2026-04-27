@@ -10,11 +10,11 @@ title: 生物统计学
 
 | 章节 | 主题 | 状态 |
 |------|------|------|
-| 第1章 | [绪论](01-intro.md) | ✅ 已完成 |
-| 第2章 | [概率论基础](02-probability.md) | ✅ 已完成 |
-| 第3章 | [假设检验](03-hypothesis.md) | ✅ 已完成 |
-| 第4章 | [回归分析](04-regression.md) | 🚧 更新中 |
-| 第5章 | [生存分析](05-survival.md) | 📝 待更新 |
+| 第1章 | [绪论](/posts/01-intro.md) | ✅ 已完成 |
+| 第2章 | [概率论基础](/posts/02-probability.md) | ✅ 已完成 |
+| 第3章 | [假设检验](/posts/03-hypothesis.md) | ✅ 已完成 |
+| 第4章 | [回归分析](/posts/04-regression.md) | 🚧 更新中 |
+| 第5章 | [生存分析](/posts/05-survival.md) | 📝 待更新 |
 
 ---
 
