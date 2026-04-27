@@ -16,32 +16,32 @@
   align-items: center;
 }
 
-/* Logo 独占左侧，跨两行 */
+/* Logo 固定在左侧，跨两行 */
 .md-header__button.md-logo {
   position: absolute;
-  left: 0;
+  left: 16px;
   top: 0;
   width: 72px;
   height: 88px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 0 0 250px;   /* ← 加左内边距，把 Logo 向右推 */
+  padding: 0;
   margin: 0;
   z-index: 20;
   background-color: var(--md-primary-fg-color);
 }
 
-
 .md-header__button.md-logo img,
 .md-header__button.md-logo svg {
-  height: 80px;          /* Logo 图片大小 */
-  width: auto;
+  height: 72px;
+  width: 72px;
+  object-fit: contain;
 }
 
 /* 标题向右偏移，紧跟 Logo */
 .md-header__title {
-  margin-left: 80px;     /* Logo宽72 + 间距8 */
+  margin-left: 96px;   /* 16(left) + 72(logo宽) + 8(间距) */
   font-size: 1rem;
   line-height: 48px;
   height: 48px;
@@ -56,7 +56,7 @@
 }
 
 .md-tabs__inner {
-  padding-left: 80px;    /* 与标题对齐 */
+  padding-left: 96px;  /* 与标题对齐 */
 }
 
 .md-tabs__list {
@@ -86,8 +86,5 @@
 
 /* 首页卡片间距 */
 .grid.cards {
-  gap: 1.5rem;        /* 默认是 1rem，调大这个数值即可 */
+  gap: 1.5rem;
 }
-
-
-
