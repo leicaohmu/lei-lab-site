@@ -10,3 +10,4 @@ histox 提供的辅助工具函数。
     options:
       members:
         - create_project
+        - about
