@@ -4,7 +4,7 @@ date: 2026-04-27
 authors:
   - name: Lei
     title: 课题组负责人
-    avatar: https://avatars.githubusercontent.com/u/leicaohmu
+    avatar: https://github.com/leicaohmu.png
 ---
 
 ## 1.1 什么是生物统计学？
@@ -23,7 +23,7 @@ authors:
 
 - **总体（Population）**：研究对象的全体
 - **样本（Sample）**：从总体中抽取的子集
-- **样本量（Sample Size）** $$n$$：样本中个体的数量
+- **样本量（Sample Size）** $n$：样本中个体的数量
 
 ### 变量类型
 
@@ -48,15 +48,15 @@ authors:
 
 ### 集中趋势
 
-- **均值**：$$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$$
+- **均值**：$\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i$
 - **中位数**：排序后中间值
 - **众数**：出现频率最高的值
 
 ### 离散程度
 
-- **方差**：$$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2$$
-- **标准差**：$$s = \sqrt{s^2}$$
-- **四分位距（IQR）**：$$Q_3 - Q_1$$
+- **方差**：$s^2 = \frac{1}{n-1}\sum_{i=1}^{n}(x_i - \bar{x})^2$
+- **标准差**：$s = \sqrt{s^2}$
+- **四分位距（IQR）**：$Q_3 - Q_1$
 
 ---
 
