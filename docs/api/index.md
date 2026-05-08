@@ -8,6 +8,8 @@
 
 > 面向数字病理学的深度学习库，基于 Slideflow 构建。
 
+![histox installation](../assets/histox.png)
+
 **安装：**
 
 ```bash
@@ -23,4 +25,4 @@ pip install histox[torch]
 | [Project](histox/project.md) | 项目管理、切片提取、模型训练 |
 | [ModelParams](histox/model_params.md) | 模型超参数配置 |
 | [Heatmap](histox/heatmap.md) | 热力图与可视化 |
-| [工具函数](histox/utils.md) | 辅助工具函数 |
+| [工具函数](histox/histox.md) | 辅助工具函数 |

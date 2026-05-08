@@ -4,11 +4,86 @@ hide:
   - toc
 ---
 
-# 欢迎来到 Lei-Lab
+<style>
+/* 隐藏自动生成的页面标题 */
+.md-content__inner > h1:first-child {
+  display: none;
+}
 
-**课题组知识共享平台 · 交互式学习 · 开放协作**
+/* Hero 区域 */
+.lei-hero {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.6rem 0 1.4rem 0;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  margin-bottom: 1.6rem;
+}
+.lei-hero-bar {
+  width: 4px;
+  height: 3.4rem;
+  background: var(--md-primary-fg-color);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.lei-hero-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: var(--md-default-fg-color);
+  line-height: 1.2;
+}
+.lei-hero-subtitle {
+  font-size: 0.88rem;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.4rem;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
 
----
+/* 卡片：只做悬停效果，不加色条 */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 悬停左侧细线（从无到有） */
+.md-typeset .grid.cards > ul > li::after,
+.md-typeset .grid.cards > ol > li::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--md-primary-fg-color);
+  border-radius: 0;
+  transform: scaleY(0);
+  transition: transform 0.18s ease;
+  transform-origin: center;
+}
+
+.md-typeset .grid.cards > ul > li:hover,
+.md-typeset .grid.cards > ol > li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+.md-typeset .grid.cards > ul > li:hover::after,
+.md-typeset .grid.cards > ol > li:hover::after {
+  transform: scaleY(1);
+}
+</style>
+
+<div class="lei-hero">
+  <div class="lei-hero-bar"></div>
+  <div>
+    <div class="lei-hero-title">Lei-Lab Knowledge Platform</div>
+    <div class="lei-hero-subtitle">课题组知识共享平台</div>
+  </div>
+</div>
 
 <div class="grid cards" markdown>
 

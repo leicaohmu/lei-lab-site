@@ -39,12 +39,21 @@ plugins:
   - search:
       lang: zh
 
+  # - i18n:
+  #     docs_structure: suffix
+  #     languages:
+  #       - locale: zh
+  #         name: 中文
+  #         default: true
+  #         build: true
+  #       - locale: en
+  #         name: English
+  #         build: true
+
   # 文献抄读
   - blog:
       blog_dir: papers
       post_date_format: full
-      post_cover: blur
-      post_cover_anchor: top
       post_url_format: "{date}/{slug}"
       archive: true
       archive_name: 按时间归档
@@ -55,6 +64,8 @@ plugins:
       pagination: true
       pagination_per_page: 10
       blog_toc: true
+      authors: true
+      authors_file: "{blog}/.authors.yml"
 
   # 博客
   - blog:
@@ -87,13 +98,17 @@ plugins:
             show_category_heading: true
             show_symbol_type_heading: true
             show_symbol_type_toc: true
-            docstring_style: google
+            docstring_style: numpy
             merge_init_into_class: true
 
 markdown_extensions:
   - admonition
   - pymdownx.details
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
@@ -124,20 +139,23 @@ nav:
   - 代码库:
     - 概览: api/index.md
     - histox:
+      - 安装: api/histox/install.md
       - 快速上手: api/histox/quickstart.md
-      - Project: api/histox/project.md
-      - ModelParams: api/histox/model_params.md
-      - Heatmap: api/histox/heatmap.md
-      - 工具函数: api/histox/utils.md
+      - API:
+        - histox: api/histox/histox.md
+        - Project: api/histox/project.md
+        - histox.model: api/histox/model.md
+        - ModelParams: api/histox/model_params.md
+        - Heatmap: api/histox/heatmap.md
   - 文献抄读:
-    - 概览: papers/index.md
+    - papers/index.md
   - 博客:
-    - 概览: blog/index.md
+    - blog/index.md
   - 课题组:
     - 认识我们: team/index.md
     - 发表文章: team/publications.md
     - 荣誉奖项: team/awards.md
-  - ✏️ 管理: https://lei-lab-site.pages.dev/admin/
+  # - ✏️ 管理: https://lei-lab-site.pages.dev/admin/
 
 extra:
   social:
@@ -151,4 +169,4 @@ extra_javascript:
   - assets/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
-copyright: Copyright &copy; 2024 - 2025 Lei-Lab Team. All rights reserved.
+copyright: Copyright &copy; 2025 - 2026 Lei-Lab Team. All rights reserved.
