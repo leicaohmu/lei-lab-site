@@ -51,23 +51,18 @@ authors:
 | 内部队列 | 吉林大学第一医院（JLU） | n=392 | 临床变量 + WSI |
 | 外部验证 | TCGA | n=168 | 临床变量 + WSI |
 
-### 核心方法
+### 核心方法流程
 
-病理医师标注（五类组织）
-↓
-cTSR（定量金标准）
-↓
-RCS 非线性分析 ──→ 非线性预后关系
-↓
-病理基础模型特征提取
-↓
-pTSR 自动化定量工具
-↓
-Token 引导多模态融合（WSI + TSR + 临床变量）
-↓
-Vision Transformer 端到端生存预测
-
-复制
+```mermaid
+flowchart TD
+    A[病理医师标注\n五类组织] --> B[cTSR 定量金标准]
+    B --> C[RCS 非线性分析]
+    C --> D[非线性预后关系]
+    B --> E[病理基础模型特征提取]
+    E --> F[pTSR 自动化定量]
+    F --> G["Token 引导多模态融合\n(WSI + TSR + 临床变量)"]
+    G --> H[Vision Transformer\n端到端生存预测]
+```
 
 - **非线性分析**：限制性立方样条（RCS）分析 TSR 与总生存期关系
 - **生物学验证**：转录组学分析 + 免疫组化
@@ -108,7 +103,7 @@ Vision Transformer 端到端生存预测
 
 - 🔴 **肿瘤增殖**：MYC、E2F 靶基因、Ki-67
 - 🟠 **间质重塑**：EMT、Vimentin
-- �� **血管生成**：CD34
+- 🟡 **血管生成**：CD34
 - 🟣 **TME 信号**：IL-6、WNT/β-catenin
 
 ### 4. 自动化 TSR 定量精度
@@ -145,9 +140,11 @@ Vision Transformer 端到端生存预测
 
 ## 个人点评
 
-> ✍️ 待补充
+!!! note "点评"
+    ✍️ 待补充
 
 ---
 
 ## 相关资源
-<a href="/papers/TSR-HCC-2026.pdf" download="TSR-HCC-2026.pdf">📄 下载 PDF</a>
+
+[:material-file-pdf-box: 下载原文 PDF](../../assets/papers/TSR-HCC-2026.pdf){ .md-button .md-button--primary }
