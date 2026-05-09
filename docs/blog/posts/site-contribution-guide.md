@@ -1,5 +1,5 @@
 ---
-title: 课题组网站协作指南
+title: 网页维护协作指南
 date: 2026-05-08
 authors:
   - lei
