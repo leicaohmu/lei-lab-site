@@ -1,5 +1,5 @@
 ---
-title: HisToX 与 HisToX-Contrib 开发维护指南
+title: HisToX 与 HisToX-Contrib 开发与维护指南
 date: 2026-05-05
 authors:
   - lei
